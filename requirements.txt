@@ -1,0 +1,17 @@
+# Core data stack (Phases 1-3)
+pandas>=2.2
+numpy>=1.26
+duckdb>=1.1
+
+# Modeling (Phase 4) - logistic regression + coefficients/p-values
+scikit-learn>=1.5
+statsmodels>=0.14
+
+# Charts + notebooks
+matplotlib>=3.8
+jupyter
+
+# Data download
+kaggle>=1.6
+
+# Added later, after a check-in: lightgbm, shap (Phase 4 challenger model)

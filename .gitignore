@@ -1,0 +1,19 @@
+# Raw and processed data are large and re-downloadable -> never commit them
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Python environment and caches
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Secrets (Kaggle token should live in your user folder, but just in case)
+kaggle.json
+.env
+
+# DuckDB database file (rebuilt from raw data)
+*.duckdb
+*.duckdb.wal
