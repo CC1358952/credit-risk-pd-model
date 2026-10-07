@@ -6,3 +6,4 @@ Tools: Claude (Cowork) for pair programming, review and drafting; a local LLM vi
 | Date | Phase | What AI did | What I verified or changed |
 |---|---|---|---|
 | 2026-10-06 | 1 - Setup | Scaffolded repo folders, `.gitignore`, `requirements.txt`, and drafted `src/download_data.py` (Kaggle download + row-count check) | I read through the loading scripts to confirm it's compatability and verified the output of the 2.26M loans being imported, and integrated the API token connection for Kaggle |
+| 2026-10-07 | 2 - SQL | Wrote `sql/schema.sql` (raw view -> typed table -> scoped view, target definition), `src/run_sql.py` runner, and the q00 worked example; q01-q09 left as prompts for me to write | I built each of the queries by hand and verified them in DuckDB as well as drew conclusions from the findings |
