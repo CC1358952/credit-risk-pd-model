@@ -36,6 +36,23 @@ Use it for LinkedIn, interviews, and the AI Usage section of the model memo.
 - Default rates rose each year 2013-2015 (12.3% to 14.9%) even within the same grade while interest rates fell, so the 2015 out-of-time test set is riskier than training data
 - Small business is the riskiest purpose (22.9%); mortgage holders default less than outright owners (11.4% vs. 15.0%)
 
+## Phase 3: Cleaning and features (Oct 7-8, 2026)
+**I did**
+- Made the modeling decisions: dropped Lending Club's grade/sub_grade/int_rate/installment (independent model, use their grade as a benchmark); excluded the 239 joint-application loans
+- Wrote all cleaning and feature code in `notebooks/02_cleaning.ipynb`: built the column list from my review file, loaded 545,779 loans from DuckDB, converted types (2 GB to 0.3 GB) with a before/after null check, created 6 "ever had" flags for never-happened blanks, filled truly-missing values with training-only (2013-14) medians, parsed employment length, grouped rare categories, engineered credit history length, log income, loan-to-income and average FICO
+- Saved the clean modeling table (545,779 x 75, zero missing values) to Parquet
+- Debugged: row index vs. column values, pandas index alignment wiping 2015 rows, imputation leakage, Timedelta vs. numeric, notebook hidden state (adopted Restart and Run All)
+
+**AI did**
+- Classified all 151 raw columns for leakage / fair-lending / sparsity in `docs/feature_review.csv` (I reviewed and made the DECIDE calls)
+- Wrote the notebook setup cell, gave step prompts, reviewed each cell
+- Drafted `docs/feature_list.md` (I wrote the engineered-feature reasoning)
+
+**Findings**
+- 38 columns are post-origination leakage (e.g. debt_settlement_flag: 9,197 scoped loans flagged)
+- Every scoped borrower has 3+ years of credit history and FICO 660+: Lending Club's own underwriting limits what the model can learn
+- Borrowers with a recent credit inquiry default 14.6% vs. 9.7% without
+
 ---
 
 ## LinkedIn-ready summary (update at the end)
