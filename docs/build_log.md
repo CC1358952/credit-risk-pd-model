@@ -53,6 +53,24 @@ Use it for LinkedIn, interviews, and the AI Usage section of the model memo.
 - Every scoped borrower has 3+ years of credit history and FICO 660+: Lending Club's own underwriting limits what the model can learn
 - Borrowers with a recent credit inquiry default 14.6% vs. 9.7% without
 
+## Phase 4: Modeling (Oct 9-13, 2026, in progress)
+**I did**
+- Wrote all modeling code in `notebooks/03_model.ipynb`: one-hot encoding, time-based split (train 2013-14: 262,992 loans; test 2015: 282,787), scaling fit on training data only, logistic regression (scikit-learn) and coefficient/p-value analysis (statsmodels)
+- Benchmarked against Lending Club's own sub-grade on the same test loans (merge by id, sub-grade to 1-35 rank)
+- Computed AUC, Gini, KS and a 10-decile calibration table
+- Diagnosed multicollinearity from counterintuitive coefficient signs; found 24 correlated pairs (|r| > 0.8, training data), then used VIF to catch three-way redundancy (e.g. total_acc, pub_rec, revolving balance/limit vs. utilization)
+- Made every keep/drop decision with written business reasoning (explainability to a declined applicant); pruned 80 -> 57 features
+
+**AI did**
+- Gave step prompts, explained concepts (AUC, KS, calibration, multicollinearity, VIF, dummy-variable VIF quirk), reviewed each cell
+- Ran independent checks to verify my numbers (benchmark AUC, correlation pairs, VIF, preview refits) and flagged remaining wrong-sign coefficients
+
+**Findings**
+- Baseline (80 features): test AUC 0.684, Gini 0.37, KS 0.267, train AUC 0.677 (no overfitting)
+- Lending Club sub-grade benchmark: AUC 0.679, KS 0.262 (my independent model is comparable)
+- Calibration: actual default rate rises in every decile (3.6% to 31.9%, ~9x lift); model under-predicts 2015 defaults by a consistent ~7-12% (13.6% vs 14.9%) due to underwriting drift -> recalibration candidate
+- Pruned model (57 features): test AUC 0.679; no non-dummy VIF > 10; all significant signs sensible except two documented (bankruptcies, income verification)
+
 ---
 
 ## LinkedIn-ready summary (update at the end)
