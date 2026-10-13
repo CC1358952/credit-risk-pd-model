@@ -53,7 +53,7 @@ Use it for LinkedIn, interviews, and the AI Usage section of the model memo.
 - Every scoped borrower has 3+ years of credit history and FICO 660+: Lending Club's own underwriting limits what the model can learn
 - Borrowers with a recent credit inquiry default 14.6% vs. 9.7% without
 
-## Phase 4: Modeling (Oct 9-13, 2026, in progress)
+## Phase 4: Modeling (Oct 9-13, 2026)
 **I did**
 - Wrote all modeling code in `notebooks/03_model.ipynb`: one-hot encoding, time-based split (train 2013-14: 262,992 loans; test 2015: 282,787), scaling fit on training data only, logistic regression (scikit-learn) and coefficient/p-value analysis (statsmodels)
 - Benchmarked against Lending Club's own sub-grade on the same test loans (merge by id, sub-grade to 1-35 rank)
@@ -70,6 +70,10 @@ Use it for LinkedIn, interviews, and the AI Usage section of the model memo.
 - Lending Club sub-grade benchmark: AUC 0.679, KS 0.262 (my independent model is comparable)
 - Calibration: actual default rate rises in every decile (3.6% to 31.9%, ~9x lift); model under-predicts 2015 defaults by a consistent ~7-12% (13.6% vs 14.9%) due to underwriting drift -> recalibration candidate
 - Pruned model (57 features): test AUC 0.679; no non-dummy VIF > 10; all significant signs sensible except two documented (bankruptcies, income verification)
+- LightGBM challenger (all 80 features): test AUC 0.696, train AUC 0.754 (overfitting gap ~0.06), KS 0.284
+- Chose the pruned 57-feature logistic regression for production: modest accuracy gap vs. LightGBM (+0.017 AUC), no overfitting, and coefficients provide ECOA/Reg B adverse-action reasons; LightGBM kept as challenger
+- Final chosen model: test AUC 0.679, Gini 0.358, KS 0.259; on par with Lending Club's own sub-grade (AUC 0.679, KS 0.262)
+- Saved outputs/metrics.json and scored 2015 test loans (data/processed/scored_test.parquet) for Phase 5
 
 ---
 

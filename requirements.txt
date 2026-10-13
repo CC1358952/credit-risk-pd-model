@@ -14,4 +14,7 @@ jupyter
 # Data download
 kaggle>=1.6
 
+#Phase 4 challenger
+lightgbm
+
 # Added later, after a check-in: lightgbm, shap (Phase 4 challenger model)

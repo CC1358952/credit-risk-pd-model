@@ -1,0 +1,30 @@
+{
+  "data": {
+    "train_rows": 262992,
+    "test_rows": 282787,
+    "actual_test_default_rate": 0.1488
+  },
+  "lr_80": {
+    "test_auc": 0.6839,
+    "ks": 0.2672
+  },
+  "lr_57": {
+    "test_auc": 0.6791,
+    "train_auc": 0.6727,
+    "ks": 0.2594,
+    "gini": 0.3582,
+    "mean_predicted_pd": 0.138
+  },
+  "lightgbm_80": {
+    "test_auc": 0.696,
+    "train_auc": 0.7535,
+    "ks": 0.2843,
+    "mean_predicted_pd": 0.1372
+  },
+  "lc_sub_grade_benchmark": {
+    "auc": 0.6786,
+    "ks": 0.2619
+  },
+  "chosen_model": "logistic_regression_pruned_57",
+  "reason": "The pruned 57 feature regression is chosen over the LightGBM (+0.0169 AUC) because it does not show signs of overfitting, its coefficients provide adverse-action reasons, and performs on par with the sub grade form Lending Club"
+}
