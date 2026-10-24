@@ -75,6 +75,22 @@ Use it for LinkedIn, interviews, and the AI Usage section of the model memo.
 - Final chosen model: test AUC 0.679, Gini 0.358, KS 0.259; on par with Lending Club's own sub-grade (AUC 0.679, KS 0.262)
 - Saved outputs/metrics.json and scored 2015 test loans (data/processed/scored_test.parquet) for Phase 5
 
+## Phase 5: Business translation (Oct 13-24, 2026)
+**I did**
+- Wrote all code in `notebooks/04_business.ipynb`: LGD from 2013-14 defaults only, expected loss (PD x LGD x EAD) on 2015 loans, merged actual outcomes, built the PD-cutoff table (5%-40%) with a loop, added a funding-cost sensitivity (3/5/7%) with a nested loop, saved outputs for Power BI
+- Explained the expected-loss shortfall and wrote the cutoff recommendation
+
+**AI did**
+- Gave step prompts and taught loop patterns (append rows, build DataFrame, nested loops), reviewed each cell
+- Independently verified LGD, EL, the cutoff table and the sensitivity results; decomposed the EL gap into PD and LGD drift
+
+**Findings**
+- LGD (training-year defaults, dollar-weighted): 0.506; 2015 actual LGD was 0.523
+- 2015 expected loss $242.3M (6.7% of $3,620.6M funded) vs. actual net loss $273.8M; ~11% gap = PD drift (~8%) x LGD drift (~3%)
+- Simple profit (interest - loss) is nearly flat near approve-all because it ignores the cost of funds; approving the riskiest ~18% of loans adds $91.5M of losses for $17.7M of profit
+- With a 5% funding cost: optimal PD cutoff 18% approves 74.8% of applicants, lowers default rate 14.9% -> 11.1%, cuts losses 44% ($273.8M -> $152.7M), raises net profit 32% ($48.4M -> $63.8M)
+- Optimal cutoff tightens as funding cost rises (3% -> 25% cutoff; 7% -> 13% cutoff); at 7%, approve-all loses $24.0M while the model cutoff earns $12.8M
+
 ---
 
 ## LinkedIn-ready summary (update at the end)
