@@ -26,5 +26,13 @@
     "ks": 0.2619
   },
   "chosen_model": "logistic_regression_pruned_57",
-  "reason": "The pruned 57 feature regression is chosen over the LightGBM (+0.0169 AUC) because it does not show signs of overfitting, its coefficients provide adverse-action reasons, and performs on par with the sub grade form Lending Club"
+  "reason": "The pruned 57 feature regression is chosen over the LightGBM (+0.0169 AUC) because it does not show signs of overfitting, its coefficients provide adverse-action reasons, and performs on par with the sub grade form Lending Club",
+  "business": {
+    "lgd": 0.5063861502640687,
+    "total_el_mm": 242.31945515381926,
+    "actual_loss_mm": 273.75193324259766,
+    "recommended_cutoff": 0.18,
+    "approval_rate": 0.7479127399774389,
+    "loss_reduction_pct": 44.20513407894634
+  }
 }
