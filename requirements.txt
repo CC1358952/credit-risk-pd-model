@@ -17,4 +17,7 @@ kaggle>=1.6
 #Phase 4 challenger
 lightgbm
 
+#Ollama AI Model for reason codes:
+ollama>=0.6
+
 # Added later, after a check-in: lightgbm, shap (Phase 4 challenger model)

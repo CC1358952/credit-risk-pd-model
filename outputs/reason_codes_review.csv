@@ -1,0 +1,54 @@
+﻿id,row_idx,pd,factor_1,value_1,factor_2,value_2,factor_3,value_3,explanation,values_ok,direction_ok,no_invention,format_ok,accurate,review_notes
+51947544,357448,0.1824275752639205,too many accounts opened in the past two years,9,credit score is too low,677,too many accounts opened in the past year,4,"Your loan application has not been approved. 
+The decision was based on the number of accounts opened in the past two years (9), the credit score being too low (677), and the number of accounts opened in the past year (4).",Y,N,Y,Y,N,Direction not provided for number of accounts opened (should be too high)
+55899977,226011,0.20347019268327343,too many accounts opened in the past two years,9,credit score is too low,662,too many accounts opened in the past year,6,"Your loan application has not been approved. 
+The decision was based on the number of accounts opened in the past two years (9), the credit score being too low (662), and the number of accounts opened in the past year (6).",Y,N,Y,Y,N,Direction not provided for number of accounts opened (should be too high)
+66403941,3033,0.2581534543448271,too many accounts opened in the past two years,14,too many accounts opened in the past year,7,credit score is too low,672,"Your loan application has not been approved. 
+The decision was based on the number of accounts opened in the past two years (14), the number of accounts opened in the past year (7), and the credit score being too low (672).",Y,N,Y,Y,N,Direction not provided for number of accounts opened (should be too high)
+63247241,483259,0.18688271334326967,monthly debt payments are too high relative to income,38%,credit score is too low,672,percentage of credit cards near max balance is too high,100%,"Your loan application has not been approved. 
+Monthly debt payments are too high relative to income (38%), credit score is too low (672), percentage of credit cards near max balance is too high (100%).",Y,Y,Y,Y,Y,All good!
+61612223,157670,0.21650571666052343,ratio of loan amount to annual income is too high,27%,credit score is too low,682,annual income is too low,"$45,000 ","Your loan application has not been approved. 
+The ratio of loan amount to annual income is too high (27%), the credit score is too low (682), and the annual income is too low ($45,000).",Y,Y,Y,Y,Y,All good!
+65646474,332978,0.22537157455354212,ratio of loan amount to annual income is too high,44%,annual income is too low,"$24,612 ",too many accounts opened in the past two years,6,"Your loan application has not been approved. 
+The ratio of loan amount to annual income is too high (44%), annual income is too low ($24,612), and too many accounts opened in the past two years (6).",Y,Y,Y,Y,Y,All good!
+56699409,219083,0.19174905102171194,ratio of loan amount to annual income is too high,34%,number of revolving accounts that carry a balance is too high,17,too many accounts opened in the past two years,6,"Your loan application has not been approved. 
+The ratio of loan amount to annual income is too high (34%), there are too many revolving accounts that carry a balance (17), and too many accounts were opened in the past two years (6).",Y,Y,Y,Y,Y,All good!
+64210385,337747,0.23174022340642358,credit score is too low,662,annual income is too low,"$27,000 ",monthly debt payments are too high relative to income,22%,"Your loan application has not been approved. 
+Credit score is too low (662), annual income is too low ($27,000), monthly debt payments are too high relative to income (22%).",Y,Y,Y,Y,Y,All good!
+44765873,511447,0.37311299431763845,length of employment left blank,not provided,too many accounts opened in the past two years,8,ratio of loan amount to annual income is too high,36%,"Your loan application has not been approved.
+The decision was based on the fact that the length of employment was not provided, you have opened 8 accounts in the past two years, and the ratio of the loan amount to your annual income is 36%.",Y,N,Y,Y,N,"Direction not provided for number of accounts opened (should be too high), also it uses the word ""you"" in reference to the factors which shouldn't happen"
+54047606,25778,0.1912906689237436,number of recent lender credit pulls is too high,3,credit score is too low,672,ratio of loan amount to annual income is too high,30%,"Your loan application has not been approved. 
+The number of recent lender credit pulls is too high (3), the credit score is too low (672), and the ratio of loan amount to annual income is too high (30%).",Y,Y,Y,Y,Y,All good!
+38567693,240645,0.22954471995830272,too many accounts opened in the past two years,11,too many accounts opened in the past year,7,number of revolving accounts that carry a balance is too high,13,"Your loan application has not been approved. 
+The decision was based on the following factors: too many accounts opened in the past two years (11), too many accounts opened in the past year (7), and the number of revolving accounts that carry a balance is too high (13).",Y,Y,Y,Y,Y,All good!
+63178265,487264,0.19684928636571944,number of revolving accounts that carry a balance is too high,26,monthly debt payments are too high relative to income,35%,too many accounts opened in the past two years,7,"Your loan application has not been approved. 
+The decision was based on the following factors: 
+- number of revolving accounts that carry a balance is too high (26) 
+- monthly debt payments are too high relative to income (35%) 
+- too many accounts opened in the past two years (7)",Y,Y,Y,N,N,The result uses bullet dashes which goes against the desired format stated
+55330408,491298,0.24474781149850805,annual income is too low,"$13,000 ",length of employment left blank,not provided,credit score is too low,672,"Your loan application has not been approved.
+The annual income is too low ($13,000) and the credit score is too low (672) and the length of employment was not provided.",Y,Y,Y,Y,Y,All good!
+65705102,407289,0.18149153794622597,credit score is too low,662,number of recent non-medical collections is too high,2,too many accounts opened in the past two years,6,"Your loan application has not been approved. 
+Credit score is too low (662), number of recent non-medical collections is too high (2), too many accounts opened in the past two years (6).",Y,Y,Y,Y,Y,All good!
+48684974,499589,0.32094144561548743,credit score is too low,667,number of recent lender credit pulls is too high,3,percentage of credit cards near max balance is too high,100%,"Your loan application has not been approved. 
+The decision was based on your credit score being too low (667), the number of recent lender credit pulls being too high (3), and the percentage of credit cards near max balance being too high (100%).",Y,Y,Y,Y,Y,All good!
+60850839,271352,0.26267909172163434,credit score is too low,662,ratio of loan amount to annual income is too high,34%,too many accounts opened in the past two years,7,"Your loan application has not been approved. 
+Credit score is too low (662), ratio of loan amount to annual income is too high (34%), and too many accounts opened in the past two years (7).",Y,Y,Y,Y,Y,All good!
+41379539,179871,0.202352843,ratio of loan amount to annual income is too high,46%,length of employment left blank,not provided,annual income is too low,"$21,370 ","Your loan application has not been approved.
+The ratio of loan amount to annual income is too high (46%), annual income is too low ($21,370), and length of employment was not provided.",Y,Y,Y,Y,Y,All good!
+9002262,214057,0.2222943796218497,credit score is too low,662,ratio of loan amount to annual income is too high,27%,unused credit amount is too low,"$1,157 ","Your loan application has not been approved. 
+Credit score is too low (662), ratio of loan amount to annual income is too high (27%), unused credit amount is too low ($1,157).",Y,Y,Y,Y,Y,All good!
+46386547,432781,0.18007266227749075,ratio of loan amount to annual income is too high,46%,monthly debt payments are too high relative to income,39%,annual income is too low,"$19,200 ","Your loan application has not been approved. 
+The ratio of loan amount to annual income is too high (46%), monthly debt payments are too high relative to income (39%), and annual income is too low ($19,200).",Y,Y,Y,Y,Y,All good!
+55958529,92443,0.20986880579090358,ratio of loan amount to annual income is too high,43%,length of employment left blank,not provided,percentage of credit cards near max balance is too high,100%,"Your loan application has not been approved.
+The ratio of loan amount to annual income is too high (43%), the length of employment was not provided, and the percentage of credit cards near max balance is too high (100%).",Y,Y,Y,Y,Y,All good!
+45474243,507453,0.20868701204900328,annual income is too low,"$19,200 ",credit score is too low,672,percentage of credit cards near max balance is too high,100%,"Your loan application has not been approved. 
+The decision was based on your annual income being too low ($19,200), your credit score being too low (672), and your percentage of credit cards near max balance being too high (100%).",Y,Y,Y,Y,Y,All good!
+55950418,90293,0.20247373308141256,monthly debt payments are too high relative to income,40%,ratio of loan amount to annual income is too high,28%,annual income is too low,"$40,000 ","Your loan application has not been approved. 
+Monthly debt payments are too high relative to income (40%), ratio of loan amount to annual income is too high (28%), and annual income is too low ($40,000).",Y,Y,Y,Y,Y,All good!
+54798567,426679,0.3322926648391831,monthly debt payments are too high relative to income,35%,credit score is too low,662,too many accounts opened in the past year,5,"Your loan application has not been approved. 
+Monthly debt payments are too high relative to income (35%), credit score is too low (662), and too many accounts opened in the past year (5).",Y,Y,Y,Y,Y,All good!
+54413364,24789,0.19039615450064296,ratio of loan amount to annual income is too high,50%,annual income is too low,"$40,000 ",number of installment loans is too low,0,"Your loan application has not been approved. 
+The ratio of loan amount to annual income is too high (50%), annual income is too low ($40,000), and number of installment loans is too low (0).",Y,Y,Y,Y,Y,All good!
+60586014,344328,0.22996359604515243,too many accounts opened in the past two years,15,too many accounts opened in the past year,8,number of recent lender credit pulls is too high,3,"Your loan application has not been approved. 
+The decision was based on the following factors: too many accounts opened in the past two years (15), too many accounts opened in the past year (8), and number of recent lender credit pulls is too high (3).",Y,Y,Y,Y,Y,All good!

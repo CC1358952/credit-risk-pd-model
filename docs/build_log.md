@@ -91,6 +91,27 @@ Use it for LinkedIn, interviews, and the AI Usage section of the model memo.
 - With a 5% funding cost: optimal PD cutoff 18% approves 74.8% of applicants, lowers default rate 14.9% -> 11.1%, cuts losses 44% ($273.8M -> $152.7M), raises net profit 32% ($48.4M -> $63.8M)
 - Optimal cutoff tightens as funding cost rises (3% -> 25% cutoff; 7% -> 13% cutoff); at 7%, approve-all loses $24.0M while the model cutoff earns $12.8M
 
+## Phase 6: AI reason codes (Oct 25 - Nov 12, 2026)
+**I did**
+- Built contribution-based reason codes (coef x standardized value) in `notebooks/05_reason_codes.ipynb`; verified rebuilt PDs match the model (max diff ~1e-15)
+- Excluded home ownership, loan purpose, and income verification as stated decline reasons (fair lending / relevance)
+- Wrote plain-English wording for 21 reason features and checked each phrase's direction against its coefficient sign
+- Fixed environment issues (wrong venv/kernel, duplicate repo copy, Windows application control blocking a statsmodels DLL); reran 03-04 and results reproduced
+- Ran the LLM explanations, designed the review rubric checks, and hand-reviewed all 25 explanations
+
+**AI did**
+- Gave step prompts and reviewed each cell; caught a sampling filter that excluded 6.2% of declined applicants
+- Wrote the cell 3 sampling/row loop, the Ollama generation cell (prompt, few-shot example, CSV save), and the scoring cell at my request
+
+**Findings**
+- 71,287 declined applicants (25.2%) at the 18% cutoff; all have exactly 3 positive reason drivers
+- Top drivers: credit score, recent account openings, loan-to-income, DTI, income
+- LLM: Ollama llama3.1:8b, temperature 0, seed 42; explanations built from structured facts only
+- Prompt v1 (rules only): 10/25 contained all values; added preambles and invented "minimum requirement" language
+- Prompt v2-v3 (few-shot example + exact-wording rule): 25/25 contained all values; tuned on sample 0, then frozen
+- Human review on an untouched sample (random_state=2): 20/25 accurate (80%); values 25/25, no invention 25/25, format 24/25, direction 21/25
+- All 4 direction failures came from reasons phrased "too many accounts opened..."; the model rewrote them as "the number of accounts opened..." and dropped "too many". Recommended fix: reword to "number of accounts opened ... is too high" to match the other reasons
+
 ---
 
 ## LinkedIn-ready summary (update at the end)
