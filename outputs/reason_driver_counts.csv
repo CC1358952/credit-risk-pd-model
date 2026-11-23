@@ -1,0 +1,28 @@
+feature,declined_count,reason,share_of_declined
+fico,41163,credit score is too low,0.577426459242218
+acc_open_past_24mths,34457,too many accounts opened in the past two years,0.48335601161502095
+loan_to_income,25784,ratio of loan amount to annual income is too high,0.36169287527880256
+dti,23650,monthly debt payments are too high relative to income,0.33175754345112013
+log_annual_inc,23505,annual income is too low,0.32972351200078553
+num_tl_op_past_12m,17048,too many accounts opened in the past year,0.2391459873469216
+percent_bc_gt_75,13143,percentage of credit cards near max balance is too high,0.18436741621894595
+emp_length_missing,9767,length of employment left blank,0.137009552933915
+inq_last_6mths,8736,number of recent lender credit pulls is too high,0.12254688793188098
+delinq_2yrs,4210,number of late payments is too high,0.059057051075231105
+num_actv_rev_tl,3512,number of revolving accounts that carry a balance is too high,0.04926564450741369
+mths_since_recent_inq,1605,the most recent credit inquiry was too recent,0.02251462398473775
+open_acc,1394,number of credit accounts currently open is too low,0.019554757529423317
+num_il_tl,1372,number of installment loans is too low,0.019246145861096693
+loan_amnt,1107,amount of loan requested was too high,0.015528778038071457
+bc_open_to_buy,872,unused credit amount is too low,0.01223224430821889
+num_bc_sats,746,number of bank card accounts in good standing is too high,0.010464741116893684
+collections_12_mths_ex_med,550,number of recent non-medical collections is too high,0.007715291708165584
+num_bc_tl,468,number of bank card accounts ever opened is too low,0.006565011853493625
+num_tl_30dpd,379,number of current overdue accounts is too high,0.005316537377081375
+total_bal_ex_mort,320,amount of total debt excluding mortgage is too high,0.0044888969938417945
+delinq_amnt,26,delinq amnt,0.0003647228807496458
+mort_acc,20,mort acc,0.00028055606211511216
+mths_since_recent_bc,16,mths since recent bc,0.0002244448496920897
+credit_history_months,5,credit history months,7.013901552877804e-05
+revol_util,4,revol util,5.611121242302243e-05
+tax_liens,2,tax liens,2.8055606211511214e-05
