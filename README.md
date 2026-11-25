@@ -190,4 +190,5 @@ I wrote all SQL queries and nearly all of the pandas, modeling and DAX code myse
 ## Author
 
 **Caleb Cort** · BBA Finance, University of Georgia (Terry College of Business), CS minor
+
 [GitHub](https://github.com/CC1358952) · [LinkedIn](https://www.linkedin.com/in/caleb-cort/) · [Email](calebcort05@gmail.com)
