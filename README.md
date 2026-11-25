@@ -1,6 +1,6 @@
 # Credit Risk Probability-of-Default Model
 
-An end-to-end consumer credit risk project on **545,779 public Lending Club loans**: SQL, feature engineering based on dtat science priciples, avalidated logistic regression PD model, expected-loss and approval-cutoff economics, a Power BI decision dashboard, and LLM-drafted explanations reviewed by hand.
+An end-to-end consumer credit risk project on **545,779 public Lending Club loans**: SQL, feature engineering based on data science principles, a validated logistic regression PD model, expected-loss and approval-cutoff economics, a Power BI decision dashboard, and LLM-drafted explanations reviewed by hand.
 
 **Tools:** Python (pandas, NumPy, scikit-learn, statsmodels, LightGBM) · SQL (DuckDB) · Power BI (DAX, Power Query) · Ollama (Llama 3.1 8B, local) · Git
 
@@ -191,4 +191,4 @@ I wrote all SQL queries and nearly all of the pandas, modeling and DAX code myse
 
 **Caleb Cort** · BBA Finance, University of Georgia (Terry College of Business), CS minor
 
-[GitHub](https://github.com/CC1358952) · [LinkedIn](https://www.linkedin.com/in/caleb-cort/) · [Email](calebcort05@gmail.com)
+[GitHub](https://github.com/CC1358952) · [LinkedIn](https://www.linkedin.com/in/caleb-cort/) · [Email](mailto:calebcort05@gmail.com)
